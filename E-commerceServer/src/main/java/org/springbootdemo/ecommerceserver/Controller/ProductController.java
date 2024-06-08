@@ -40,19 +40,19 @@ public class ProductController {
     }
 
 
-    @GetMapping("/product/{name}")
+    @GetMapping("/product/name/{name}")
     public List<Product> findProductByName(@PathVariable String name){
         return service.getAllProductByName(name);
     }
 
 
-    @GetMapping("/product/{price}")
+    @GetMapping("/product/price/{price}")
     public List<Product> findProductByPrice(@PathVariable Integer price){
         return service.getAllProductByPrice(price);
 
     }
 
-    @GetMapping("/product/{availability}")
+    @GetMapping("/product/availability/{availability}")
     public List<Product> findProductByAvailability(@PathVariable String availability){
         return service.getAllProductByAvailability(availability);
     }
